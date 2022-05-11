@@ -1,8 +1,30 @@
 .banner {
-  background: lime;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  min-height: 80vh;
   position: relative;
 }
 
-.banner .overlay {
-  background: aqua;
+.banner > div {
+  display: flex;
+  max-width: 1024px;
+}
+
+.banner > div > div {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  padding: 24px;
+}
+
+.headshot img {
+  border-radius: 50%;
+}
+
+.intro article {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
