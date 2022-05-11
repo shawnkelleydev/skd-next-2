@@ -1,0 +1,8 @@
+.nav {
+  --gutter: 16px;
+  align-items: center;
+  background: aqua;
+  display: flex;
+  gap: var(--gutter);
+  padding: var(--gutter);
+}
