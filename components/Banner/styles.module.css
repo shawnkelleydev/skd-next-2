@@ -1,0 +1,8 @@
+.banner {
+  background: lime;
+  position: relative;
+}
+
+.banner .overlay {
+  background: aqua;
+}

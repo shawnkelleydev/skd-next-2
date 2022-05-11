@@ -1,5 +1,9 @@
 import styles from './styles.module.css'
 
-export default function PageWrapper({ children }) {
-  return <div className={styles['page-wrapper']}>{children}</div>
+export default function PageWrapper() {
+  return (
+    <section className={styles.banner}>
+      <h2>Banner</h2>
+    </section>
+  )
 }
