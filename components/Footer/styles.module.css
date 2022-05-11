@@ -1,0 +1,12 @@
+.footer {
+  background: var(--color-primary);
+  color: #fff;
+  display: flex;
+  padding: 48px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    margin-bottom: 45px;
+  }
+}
