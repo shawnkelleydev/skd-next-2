@@ -34,3 +34,20 @@
 .intro h2 {
   font-size: clamp(2rem, 4vw, 3rem);
 }
+
+.intro span {
+  display: flex;
+  gap: 12px;
+}
+
+.intro svg {
+  /* cursor: pointer; */
+  fill: #111;
+  transition: 0.2s ease-out;
+  height: 44px;
+  width: 44px;
+}
+
+.intro svg:hover {
+  fill: #555;
+}

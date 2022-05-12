@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react'
 
 import styles from './styles.module.css'
 
-const bString = 'Shawn Kelley'
-const smallString = '// full stack javascript'
+const bString = 'Welcome!'
+const smallString = "I'm glad you're here!"
 
 export default function Welcome() {
   const [cursorB, setCursorB] = useState(true)
@@ -43,7 +43,7 @@ export default function Welcome() {
         () => increment(letter, b, setB, bIndex, setBIndex),
         duration(bIndex, letter)
       )
-    if (b === bString) setCursorB(false)
+    if (b === bString) setTimeout(() => setCursorB(false), 1000)
   }, [b, bIndex])
 
   useEffect(() => {
