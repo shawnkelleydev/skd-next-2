@@ -1,3 +1,4 @@
+import ArrowDown from 'components/ArrowDown'
 import Banner from 'components/Banner'
 import Family from 'components/Family'
 import Header from 'components/Header'
@@ -10,6 +11,7 @@ export default function Home() {
       <Header />
       <Banner />
       <Family />
+      <ArrowDown />
       <Welcome />
     </PageWrapper>
   )

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import styles from './styles.module.css'
 
 const bString = 'Shawn Kelley'
-const smallString = '// full stack JavaScript'
+const smallString = '// full stack javascript'
 
 export default function Welcome() {
   const [cursorB, setCursorB] = useState(true)

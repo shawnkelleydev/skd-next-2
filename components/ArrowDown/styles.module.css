@@ -1,0 +1,18 @@
+.arrow-down {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  transition: 0.2s ease-out;
+  bottom: 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .arrow-down {
+    bottom: 65px;
+  }
+}
+
+.arrow-down[data-hide-arrow='true'] {
+  fill: transparent;
+}
