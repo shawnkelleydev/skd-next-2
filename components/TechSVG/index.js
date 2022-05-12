@@ -1,11 +1,27 @@
 import CSS from './CSS'
+import Express from './Express'
 import Git from './Git'
 import GitHub from './GitHub'
 import HTML from './HTML'
-import JS from './JS'
+import JavaScript from './JavaScript'
 import Next from './Next'
+import Node from './Node'
 import React from './React'
 import Router from './Router'
 import VSCode from './VSCode'
 
-export default { HTML, CSS, JS, React, Router, Next, Git, GitHub, VSCode }
+const icons = {
+  JavaScript,
+  React,
+  Router,
+  Next,
+  Node,
+  Express,
+  HTML,
+  CSS,
+  Git,
+  GitHub,
+  VSCode,
+}
+
+export default icons

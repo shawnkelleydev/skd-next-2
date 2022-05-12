@@ -1,0 +1,18 @@
+.skills {
+  align-items: center;
+  box-shadow: 0 0 10px #111;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+}
+
+.skills div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skills svg {
+  width: 44px;
+}

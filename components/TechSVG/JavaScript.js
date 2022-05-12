@@ -1,4 +1,4 @@
-export default function JS() {
+export default function JavaScript() {
   return (
     <svg
       aria-label='JavaScript'
