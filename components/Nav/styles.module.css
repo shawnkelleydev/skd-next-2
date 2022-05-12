@@ -1,7 +1,22 @@
 .nav {
-  --gutter: 16px;
   align-items: center;
   display: flex;
-  gap: var(--gutter);
-  padding: var(--gutter);
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    background: #111;
+    color: #fff;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .nav a {
+    flex: 1;
+    padding: 24px 8px;
+    text-align: center;
+  }
 }

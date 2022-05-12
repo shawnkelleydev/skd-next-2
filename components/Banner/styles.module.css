@@ -2,13 +2,15 @@
   display: flex;
   flex: 1;
   justify-content: center;
-  min-height: 80vh;
+  min-height: 100vh;
   position: relative;
+  transition: 0.5s ease-out;
 }
 
 .banner > div {
-  display: flex;
-  max-width: 1024px;
+  align-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .banner > div > div {
@@ -27,4 +29,8 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+
+.intro h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
 }

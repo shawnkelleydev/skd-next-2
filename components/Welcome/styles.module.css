@@ -1,0 +1,47 @@
+.welcome {
+  background: #fff;
+  display: flex;
+  flex: 1;
+  position: fixed;
+  transition: 0.3s ease-out;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.welcome h1 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 45vh;
+  margin-left: 10vw;
+}
+
+.welcome h1 b {
+  font-size: clamp(2rem, 4vw, 4rem);
+}
+
+.welcome h1 small {
+  font-size: clamp(1rem, 2vw, 3rem);
+  font-weight: 300;
+}
+
+.welcome b[data-cursor='true']::after {
+  content: '_';
+}
+
+.welcome small[data-cursor='true']::after {
+  content: '_';
+}
+
+.welcome b[data-hide-cursor='true']::after,
+.welcome small[data-hide-cursor='true']::after {
+  color: transparent;
+}
+
+.welcome[data-end='true'] {
+  opacity: 0;
+  z-index: -1;
+}

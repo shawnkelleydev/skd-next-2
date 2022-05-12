@@ -19,7 +19,7 @@ export default function Banner() {
             <h2>Meet Shawn</h2>
             <p>
               Shawn Kelley is a full stack software developer at Compassion
-              International
+              International.
             </p>
           </article>
         </div>

@@ -1,5 +1,6 @@
 .header {
   display: flex;
+  padding: 16px;
   position: absolute;
   width: 100vw;
   z-index: 1;
