@@ -15,18 +15,17 @@ export default function Logo() {
   }, [hideCursor])
 
   useEffect(() => {
-    const tagArray = tagString.split('')
+    const letter = tagString[tagIndex]
+    console.log(letter)
 
     const increment = () => {
-      setTag(tag + tagArray[tagIndex])
+      setTag(tag + letter)
       setTagIndex(tagIndex + 1)
     }
 
-    const letter = tagArray[tagIndex]
+    const delay = tagIndex === 0 ? 6000 : letter === ' ' ? 200 : 100
 
-    const delay = tagIndex === 0 ? 3000 : letter === ' ' ? 200 : 60
-
-    if (tagArray && tagIndex < tagArray.length) setTimeout(increment, delay)
+    if (tagString && tagIndex < tagString.length) setTimeout(increment, delay)
   }, [tag, tagIndex, tagString])
 
   return (

@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react'
 
 import styles from './styles.module.css'
 
-const bString = 'Welcome!'
-const smallString = "I'm glad you're here!"
+const bString = 'Welcome.'
+// const smallString = "I'm glad you're here!"
 
 export default function Welcome() {
   const [cursorB, setCursorB] = useState(true)
@@ -12,8 +12,8 @@ export default function Welcome() {
   const [b, setB] = useState('')
   const [bIndex, setBIndex] = useState(0)
 
-  const [small, setSmall] = useState('')
-  const [smallIndex, setSmallIndex] = useState(0)
+  // const [small, setSmall] = useState('')
+  // const [smallIndex, setSmallIndex] = useState(0)
 
   const [end, setEnd] = useState(false)
 
@@ -43,18 +43,22 @@ export default function Welcome() {
         () => increment(letter, b, setB, bIndex, setBIndex),
         duration(bIndex, letter)
       )
-    if (b === bString) setTimeout(() => setCursorB(false), 1000)
+    if (b === bString) setTimeout(() => setCursorB(false), 2000)
   }, [b, bIndex])
 
   useEffect(() => {
-    const letter = smallString[smallIndex]
-    if (b === bString && small !== smallString)
-      setTimeout(
-        () => increment(letter, small, setSmall, smallIndex, setSmallIndex),
-        duration(smallIndex, letter)
-      )
-    if (small === smallString) setTimeout(() => setEnd(true), 3000)
-  }, [b, smallIndex, small])
+    !cursorB && setEnd(true)
+  }, [cursorB])
+
+  // useEffect(() => {
+  //   const letter = smallString[smallIndex]
+  //   if (b === bString && small !== smallString)
+  //     setTimeout(
+  //       () => increment(letter, small, setSmall, smallIndex, setSmallIndex),
+  //       duration(smallIndex, letter)
+  //     )
+  //   if (small === smallString) setTimeout(() => setEnd(true), 3000)
+  // }, [b, smallIndex, small])
 
   return (
     <div
@@ -68,12 +72,12 @@ export default function Welcome() {
         >
           {b}
         </b>
-        <small
+        {/* <small
           data-cursor={!cursorB}
           data-hide-cursor={hideCursor}
         >
           {small}
-        </small>
+        </small> */}
       </h1>
     </div>
   )

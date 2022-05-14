@@ -1,0 +1,8 @@
+.headshot {
+  flex: 1 250px;
+  max-width: 300px;
+}
+
+.headshot img {
+  border-radius: 50%;
+}

@@ -4,50 +4,28 @@
   justify-content: center;
   min-height: 100vh;
   position: relative;
-  transition: 0.5s ease-out;
 }
 
 .banner > div {
   align-content: center;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-.banner > div > div {
   align-items: center;
   display: flex;
-  flex: 1;
+  flex-wrap: wrap;
+  gap: 48px;
   justify-content: center;
+  max-width: 1048px;
   padding: 24px;
 }
 
-.headshot img {
-  border-radius: 50%;
+@media (max-width: 768px) {
+  .banner > div {
+    margin-top: 44px;
+  }
 }
 
-.intro article {
+.intro {
   display: flex;
   flex-direction: column;
+  flex: 1;
   gap: 24px;
-}
-
-.intro h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
-}
-
-.intro span {
-  display: flex;
-  gap: 12px;
-}
-
-.intro svg {
-  /* cursor: pointer; */
-  fill: #111;
-  transition: 0.2s ease-out;
-  height: 44px;
-  width: 44px;
-}
-
-.intro svg:hover {
-  fill: #555;
 }

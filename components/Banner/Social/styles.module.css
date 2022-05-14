@@ -1,0 +1,13 @@
+.social {
+  display: flex;
+  gap: 12px;
+}
+
+.social svg {
+  height: 32px;
+  transition: 0.1s ease-out;
+}
+
+.social svg:hover {
+  fill: rgb(240, 144, 69);
+}
