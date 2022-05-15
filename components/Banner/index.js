@@ -1,6 +1,6 @@
+import ConnectButton from 'components/ConnectButton'
 import About from './About'
 import Headshot from './Headshot'
-import Social from './Social'
 
 import styles from './styles.module.css'
 
@@ -14,10 +14,12 @@ export default function Banner({ cursor, dispatch, state }) {
             dispatch={dispatch}
             step={state.step}
           />
-          <Social
-            dispatch={dispatch}
-            state={state}
-          />
+          <ConnectButton
+            step={state.step}
+            url='https://www.linkedin.com/in/shawnkelleydev/'
+          >
+            Connect with Shawn
+          </ConnectButton>
         </div>
         <Headshot step={state.step} />
       </div>

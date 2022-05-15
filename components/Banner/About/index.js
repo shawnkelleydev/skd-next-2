@@ -10,6 +10,7 @@ export default function About({ cursor, step, dispatch }) {
     'His team uses JavaScript, Dart, and AWS to better connect sponsors with children around the world.'
   const p3 =
     'Shawn lives in the Denver metro area with his wife, two daughters, and English Springer Spaniel.'
+  const ps = 'P.S. This website was made with Nextjs.  Next rocks!'
 
   return (
     <article className={styles.about}>
@@ -17,6 +18,8 @@ export default function About({ cursor, step, dispatch }) {
         <TypeOut
           type='h2'
           cursor={cursor}
+          delayAfter={1000}
+          delayBefore={1000}
           dispatch={dispatch}
         >
           {header}
@@ -25,6 +28,7 @@ export default function About({ cursor, step, dispatch }) {
       {step >= 4 && (
         <TypeOut
           cursor={cursor}
+          delayAfter={1000}
           dispatch={dispatch}
         >
           {p1}
@@ -33,6 +37,7 @@ export default function About({ cursor, step, dispatch }) {
       {step >= 5 && (
         <TypeOut
           cursor={cursor}
+          delayAfter={1000}
           dispatch={dispatch}
         >
           {p2}
@@ -41,9 +46,19 @@ export default function About({ cursor, step, dispatch }) {
       {step >= 6 && (
         <TypeOut
           cursor={cursor}
+          delayAfter={2000}
           dispatch={dispatch}
         >
           {p3}
+        </TypeOut>
+      )}
+      {step >= 7 && (
+        <TypeOut
+          cursor={cursor}
+          delayAfter={2000}
+          dispatch={dispatch}
+        >
+          {ps}
         </TypeOut>
       )}
     </article>

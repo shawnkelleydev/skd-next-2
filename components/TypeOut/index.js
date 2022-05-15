@@ -33,35 +33,46 @@ export default function TypeOut({
       !delayAfter ? handleNext() : setTimeout(handleNext, delayAfter)
   }, [text, index])
 
-  if (type === 'h1')
-    return (
-      <h1
-        className={styles['type-out']}
-        data-end={end}
-        data-hide-cursor={!end ? !cursor : true}
-      >
-        {text}
-      </h1>
-    )
-
-  if (type === 'h2')
-    return (
-      <h2
-        className={styles['type-out']}
-        data-end={end}
-        data-hide-cursor={!end ? !cursor : true}
-      >
-        {text}
-      </h2>
-    )
-
-  return (
-    <p
-      className={styles['type-out']}
-      data-hide-cursor={!end ? !cursor : true}
-      data-end={end}
-    >
-      {text}
-    </p>
-  )
+  switch (type) {
+    case 'h1':
+      return (
+        <h1
+          className={styles['type-out']}
+          data-end={end}
+          data-hide-cursor={!end ? !cursor : true}
+        >
+          {text}
+        </h1>
+      )
+    case 'h2':
+      return (
+        <h2
+          className={styles['type-out']}
+          data-end={end}
+          data-hide-cursor={!end ? !cursor : true}
+        >
+          {text}
+        </h2>
+      )
+    case 'h3':
+      return (
+        <h3
+          className={styles['type-out']}
+          data-end={end}
+          data-hide-cursor={!end ? !cursor : true}
+        >
+          {text}
+        </h3>
+      )
+    default:
+      return (
+        <p
+          className={styles['type-out']}
+          data-hide-cursor={!end ? !cursor : true}
+          data-end={end}
+        >
+          {text}
+        </p>
+      )
+  }
 }

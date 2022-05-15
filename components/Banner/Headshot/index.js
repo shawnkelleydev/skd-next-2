@@ -6,7 +6,7 @@ export default function Headshot({ step }) {
   return (
     <div
       className={styles.headshot}
-      data-show={step >= 7}
+      data-show={step >= 8}
     >
       <Image
         height='696'

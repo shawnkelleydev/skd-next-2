@@ -14,7 +14,7 @@ export default function Logo({ cursor, dispatch, state }) {
         cursor={!cursor || state.step > 2}
         data-hide-cursor={!cursor}
         delayAfter={2000}
-        delayBefore={2000}
+        delayBefore={1000}
         dispatch={dispatch}
         type='h1'
       >
