@@ -5,8 +5,6 @@ import styles from './styles.module.css'
 const headerString = 'Welcome.'
 
 export default function Welcome({ cursor, dispatch, state }) {
-  if (state.step > 2) return
-
   const [header, setHeader] = useState('')
   const [headerIndex, setHeaderIndex] = useState(0)
 
@@ -35,6 +33,8 @@ export default function Welcome({ cursor, dispatch, state }) {
     if (header === headerString)
       setTimeout(() => dispatch({ type: 'next' }), 2000)
   }, [header, headerIndex])
+
+  if (state.step > 2) return
 
   return (
     <div
