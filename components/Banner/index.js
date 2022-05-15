@@ -8,7 +8,6 @@ export default function Banner({ cursor, dispatch, state }) {
   return (
     <section className={styles.banner}>
       <div>
-        {/* <Headshot state={state} /> */}
         <div className={styles.intro}>
           <About
             cursor={cursor}
@@ -20,6 +19,7 @@ export default function Banner({ cursor, dispatch, state }) {
             state={state}
           />
         </div>
+        <Headshot step={state.step} />
       </div>
     </section>
   )

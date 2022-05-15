@@ -2,19 +2,16 @@
   display: flex;
   flex: 1;
   justify-content: center;
-  min-height: 100vh;
+  min-height: calc(100vh - 68px);
   position: relative;
 }
 
 .banner > div {
-  align-content: center;
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 48px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   max-width: 1048px;
   padding: 24px;
+  width: 100%;
 }
 
 @media (max-width: 400px) {
@@ -23,15 +20,8 @@
   }
 }
 
-@media (max-height: 800px) {
-  .banner > div {
-    padding-top: 96px;
-  }
-}
-
 .intro {
   display: flex;
   flex-direction: column;
-  flex: 1 250px;
   gap: 24px;
 }

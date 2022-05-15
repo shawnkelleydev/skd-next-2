@@ -1,1 +1,8 @@
+.family {
+  opacity: 0;
+  transition: 0.5s ease-out;
+}
 
+.family[data-show='true'] {
+  opacity: 1;
+}

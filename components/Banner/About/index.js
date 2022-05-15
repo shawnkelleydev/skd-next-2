@@ -48,28 +48,26 @@ export default function About({ cursor, step, stepDispatch }) {
 
   const [state, dispatch] = useReducer(reducer, initialState)
 
-  function delay(string) {
+  function delay() {
     if (state.index < 1) return 2000
-    if (string[state.index] === ' ') return 200
-    return 70
+    return Math.floor(Math.random() * 100) + 30
   }
 
-  const runStep = (type, string, index) => {
+  const runStep = (type, string, displayString, index) => {
     const reset = () => {
       stepDispatch({ type: 'next' })
       dispatch({ type: 'reset' })
     }
 
-    if (index === string.length) setTimeout(reset, 2000)
-    if (index < string.length)
-      setTimeout(() => dispatch({ type }), delay(string))
+    if (string === displayString) setTimeout(reset, 2000)
+    if (string !== displayString) setTimeout(() => dispatch({ type }), delay())
   }
 
   useEffect(() => {
-    step === 3 && runStep('header', header, state.index)
-    step === 4 && runStep('p1', p1, state.index)
-    step === 5 && runStep('p2', p2, state.index)
-    step === 6 && runStep('p3', p3, state.index)
+    step === 3 && runStep('header', header, state.header, state.index)
+    step === 4 && runStep('p1', p1, state.p1, state.index)
+    step === 5 && runStep('p2', p2, state.p2, state.index)
+    step === 6 && runStep('p3', p3, state.p3, state.index)
   }, [step, state])
 
   return (
