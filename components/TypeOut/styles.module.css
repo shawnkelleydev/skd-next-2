@@ -1,0 +1,3 @@
+.type-out[data-hide-cursor='false']::after {
+  content: '_';
+}

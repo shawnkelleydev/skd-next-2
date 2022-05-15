@@ -28,7 +28,6 @@ export default function Home() {
   }
 
   const [state, dispatch] = useReducer(reducer, initialState)
-
   return (
     <PageWrapper>
       <Header

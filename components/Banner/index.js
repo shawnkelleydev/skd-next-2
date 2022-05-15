@@ -11,7 +11,7 @@ export default function Banner({ cursor, dispatch, state }) {
         <div className={styles.intro}>
           <About
             cursor={cursor}
-            stepDispatch={dispatch}
+            dispatch={dispatch}
             step={state.step}
           />
           <Social
