@@ -7,7 +7,7 @@ import Footer from 'components/Footer'
 import Header from 'components/Header'
 import PageWrapper from 'components/PageWrapper'
 import Skills from 'components/Skills'
-import Welcome from 'components/welcome'
+import Welcome from 'components/Welcome'
 
 export default function Home() {
   const [cursor, setCursor] = useState(true)
