@@ -1,38 +1,35 @@
 import { useEffect, useState } from 'react'
+
 import { meta } from 'constants/data'
 
 import styles from './styles.module.css'
 
-export default function Logo() {
-  const [hideCursor, setHideCursor] = useState(false)
-
-  const [tagString, setTagString] = useState(meta.TAG)
-  const [tag, setTag] = useState('')
-  const [tagIndex, setTagIndex] = useState(0)
+export default function Logo({ cursor, dispatch, state }) {
+  const [header, setHeader] = useState('')
+  const [index, setIndex] = useState(0)
 
   useEffect(() => {
-    setTimeout(() => setHideCursor(!hideCursor), 500)
-  }, [hideCursor])
+    if (state.step === 2) {
+      const letter = meta.TITLE[index]
 
-  useEffect(() => {
-    const letter = tagString[tagIndex]
-    console.log(letter)
+      const increment = () => {
+        const newWord = header + letter
+        setHeader(newWord)
+        setIndex(index + 1)
+      }
 
-    const increment = () => {
-      setTag(tag + letter)
-      setTagIndex(tagIndex + 1)
+      const delay = index < 1 ? 2000 : letter === ' ' ? 200 : 90
+
+      if (header !== meta.TITLE) setTimeout(increment, delay)
+      if (header === meta.TITLE)
+        setTimeout(() => dispatch({ type: 'next' }), 2000)
     }
-
-    const delay = tagIndex === 0 ? 6000 : letter === ' ' ? 200 : 100
-
-    if (tagString && tagIndex < tagString.length) setTimeout(increment, delay)
-  }, [tag, tagIndex, tagString])
+  }, [header, index, state])
 
   return (
     <div className={styles.logo}>
-      <h1>
-        <b>{meta.TITLE}</b>
-        <small data-hide-cursor={hideCursor}>{tag}</small>
+      <h1 data-hide-cursor={!cursor || state.step > 2}>
+        {state.step > 2 ? meta.TITLE : header}
       </h1>
     </div>
   )

@@ -2,24 +2,13 @@ import { useEffect, useState } from 'react'
 
 import styles from './styles.module.css'
 
-const bString = 'Welcome.'
-// const smallString = "I'm glad you're here!"
+const headerString = 'Welcome.'
 
-export default function Welcome() {
-  const [cursorB, setCursorB] = useState(true)
-  const [hideCursor, setHideCursor] = useState(false)
+export default function Welcome({ cursor, dispatch, state }) {
+  if (state.step > 2) return
 
-  const [b, setB] = useState('')
-  const [bIndex, setBIndex] = useState(0)
-
-  // const [small, setSmall] = useState('')
-  // const [smallIndex, setSmallIndex] = useState(0)
-
-  const [end, setEnd] = useState(false)
-
-  useEffect(() => {
-    setTimeout(() => setHideCursor(!hideCursor), 500)
-  }, [hideCursor])
+  const [header, setHeader] = useState('')
+  const [headerIndex, setHeaderIndex] = useState(0)
 
   const increment = (newLetter, prevText, setText, index, setIndex) => {
     setText(prevText + newLetter)
@@ -32,53 +21,27 @@ export default function Welcome() {
       case ' ':
         return 100
       default:
-        return 40
+        return 60
     }
   }
 
   useEffect(() => {
-    const letter = bString[bIndex]
-    if (b !== bString)
+    const letter = headerString[headerIndex]
+    if (header !== headerString)
       setTimeout(
-        () => increment(letter, b, setB, bIndex, setBIndex),
-        duration(bIndex, letter)
+        () => increment(letter, header, setHeader, headerIndex, setHeaderIndex),
+        duration(headerIndex, letter)
       )
-    if (b === bString) setTimeout(() => setCursorB(false), 2000)
-  }, [b, bIndex])
-
-  useEffect(() => {
-    !cursorB && setEnd(true)
-  }, [cursorB])
-
-  // useEffect(() => {
-  //   const letter = smallString[smallIndex]
-  //   if (b === bString && small !== smallString)
-  //     setTimeout(
-  //       () => increment(letter, small, setSmall, smallIndex, setSmallIndex),
-  //       duration(smallIndex, letter)
-  //     )
-  //   if (small === smallString) setTimeout(() => setEnd(true), 3000)
-  // }, [b, smallIndex, small])
+    if (header === headerString)
+      setTimeout(() => dispatch({ type: 'next' }), 2000)
+  }, [header, headerIndex])
 
   return (
     <div
       className={styles.welcome}
-      data-end={end}
+      data-end={state.step === 2}
     >
-      <h1>
-        <b
-          data-cursor={cursorB}
-          data-hide-cursor={hideCursor}
-        >
-          {b}
-        </b>
-        {/* <small
-          data-cursor={!cursorB}
-          data-hide-cursor={hideCursor}
-        >
-          {small}
-        </small> */}
-      </h1>
+      <h1 data-hide-cursor={!cursor}>{header}</h1>
     </div>
   )
 }

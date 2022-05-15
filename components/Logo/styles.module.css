@@ -1,17 +1,7 @@
-.logo > h1 {
-  display: flex;
-  flex-direction: column;
-}
-
-.logo small {
-  font-size: 1rem;
-  font-weight: 300;
-}
-
-.logo small::after {
+.logo h1::after {
   content: '_';
 }
 
-.logo small[data-hide-cursor='true']::after {
+.logo h1[data-hide-cursor='true']::after {
   color: transparent;
 }

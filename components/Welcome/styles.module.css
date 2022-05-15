@@ -13,31 +13,17 @@
 }
 
 .welcome h1 {
-  display: flex;
-  flex-direction: column;
-  margin-top: 45vh;
-  margin-left: 10vw;
-}
-
-.welcome h1 b {
   font-size: clamp(2rem, 4vw, 4rem);
+  position: absolute;
+  top: 45%;
+  left: 10%;
 }
 
-.welcome h1 small {
-  font-size: clamp(1rem, 2vw, 3rem);
-  font-weight: 300;
-}
-
-.welcome b[data-cursor='true']::after {
+.welcome h1[data-hide-cursor='false']::after {
   content: '_';
 }
 
-.welcome small[data-cursor='true']::after {
-  content: '_';
-}
-
-.welcome b[data-hide-cursor='true']::after,
-.welcome small[data-hide-cursor='true']::after {
+.welcome h1[data-hide-cursor='true']::after {
   color: transparent;
 }
 

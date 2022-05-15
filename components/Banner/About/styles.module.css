@@ -8,6 +8,27 @@
   font-size: 2rem;
 }
 
+.about[data-step='3'] h2::after {
+  content: '_';
+}
+
+.about[data-step='4'] p[data-step='4']::after {
+  content: '_';
+}
+
+.about[data-step='5'] p[data-step='5']::after {
+  content: '_';
+}
+
+.about[data-step='6'] p[data-step='6']::after {
+  content: '_';
+}
+
 .about p {
   margin-bottom: 12px;
+}
+
+.about[data-hide-cursor='true'] h2::after,
+.about[data-hide-cursor='true'] p::after {
+  color: transparent;
 }
