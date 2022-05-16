@@ -1,0 +1,47 @@
+.project {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px #111;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  transition: 0.2s ease-out;
+}
+
+.project:hover {
+  box-shadow: 0 6px 16px #111;
+  transform: scale(1.01);
+}
+
+.project h3 {
+  font-size: 2rem;
+}
+
+.project ul {
+  display: flex;
+  gap: 8px;
+}
+
+.project svg {
+  width: 44px;
+}
+
+.project span {
+  display: flex;
+  gap: 1px;
+  margin-top: auto;
+}
+
+.project a {
+  display: flex;
+  flex: 1;
+}
+
+.project button {
+  border: none;
+  background: #303341;
+  color: #fff;
+  flex: 1;
+  padding: 12px;
+}

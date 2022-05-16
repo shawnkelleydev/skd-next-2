@@ -11,5 +11,3 @@ export const meta = {
   TAG: '// Full Stack JavaScript',
   TITLE: 'Shawn Kelley',
 }
-
-export const sections = ['about', 'projects', 'contact']

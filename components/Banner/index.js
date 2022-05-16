@@ -1,4 +1,4 @@
-import ConnectButton from 'components/ConnectButton'
+import Button from 'components/Button'
 import About from './About'
 import Headshot from './Headshot'
 
@@ -14,12 +14,15 @@ export default function Banner({ cursor, dispatch, state }) {
             dispatch={dispatch}
             step={state.step}
           />
-          <ConnectButton
-            step={state.step}
-            url='https://www.linkedin.com/in/shawnkelleydev/'
-          >
-            Connect with Shawn
-          </ConnectButton>
+          <span>
+            <Button
+              data-hide={state.step < 8}
+              disabled={state.step < 8}
+              url='https://www.linkedin.com/in/shawnkelleydev/'
+            >
+              Connect with Shawn
+            </Button>
+          </span>
         </div>
         <Headshot step={state.step} />
       </div>

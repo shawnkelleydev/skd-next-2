@@ -8,6 +8,7 @@ import Header from 'components/Header'
 import PageWrapper from 'components/PageWrapper'
 import Skills from 'components/Skills'
 import Welcome from 'components/Welcome'
+import Projects from 'components/Projects'
 
 export default function Home() {
   const [cursor, setCursor] = useState(true)
@@ -42,6 +43,7 @@ export default function Home() {
       />
       <Family />
       <Skills />
+      <Projects />
       <Footer />
       <ArrowDown />
       <Welcome
