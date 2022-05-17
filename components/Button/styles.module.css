@@ -28,6 +28,7 @@
 .button[data-hover-text]::after {
   align-items: center;
   background: #6e768d;
+  border-radius: 8px;
   content: attr(data-hover-text);
   display: flex;
   justify-content: center;
