@@ -7,7 +7,7 @@ export default function About({ cursor, step, dispatch }) {
   const p1 =
     'Shawn Kelley is a full stack software developer at Compassion International.'
   const p2 =
-    'His team uses JavaScript, Dart, and AWS to better connect sponsors with children around the world.'
+    'His team uses JavaScript to better connect sponsors with children around the world.'
   const p3 =
     'Shawn lives in the Denver metro area with his wife, two daughters, and English Springer Spaniel.'
   const ps = 'P.S. This website was made with Nextjs.  Next rocks!'
