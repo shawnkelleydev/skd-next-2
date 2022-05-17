@@ -18,8 +18,16 @@ export default function Project({ project }) {
       </ul>
       <p>{project.description}</p>
       <span>
-        <Button url={project.liveUrl}>live</Button>
-        <Button url={project.ghUrl}>
+        <Button
+          data-hover-text='see site'
+          url={project.liveUrl}
+        >
+          live
+        </Button>
+        <Button
+          data-hover-text='see repo'
+          url={project.ghUrl}
+        >
           <GitHub />
         </Button>
       </span>

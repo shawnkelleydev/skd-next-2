@@ -25,6 +25,11 @@
 
 .project svg {
   width: 44px;
+  transition: 0.2s ease-out;
+}
+
+.project svg:hover {
+  transform: scale(1.1);
 }
 
 .project span {
@@ -36,12 +41,4 @@
 .project a {
   display: flex;
   flex: 1;
-}
-
-.project button {
-  border: none;
-  background: #303341;
-  color: #fff;
-  flex: 1;
-  padding: 12px;
 }

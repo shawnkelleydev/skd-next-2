@@ -17,7 +17,7 @@ export default function Home() {
     setTimeout(() => setCursor(!cursor), 500)
   }, [cursor])
 
-  const initialState = { step: 2 }
+  const initialState = { step: 1 }
 
   const reducer = (state, action) => {
     switch (action.type) {
