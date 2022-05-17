@@ -7,6 +7,12 @@ export default function ArrowDown() {
   const [hideArrow, setHideArrow] = useState(true)
   const [y, setY] = useState(0)
 
+  const [windowHeight, setWindowHeight] = useState(1000)
+
+  useEffect(() => {
+    setWindowHeight(window.innerHeight)
+    window.addEventListener('resize', () => setWindowHeight(window.innerHeight))
+  }, [])
   useEffect(() => {
     window.addEventListener('scroll', () => setY(window.pageYOffset))
   }, [anchor])
@@ -16,10 +22,17 @@ export default function ArrowDown() {
     if (y < 50) setHideArrow(false)
   }, [hideArrow, y])
 
+  const handleClick = () => {
+    scroll({ top: windowHeight, left: 0, behavior: 'smooth' })
+  }
+
   return (
     <div
       className={styles['arrow-down']}
       data-hide-arrow={hideArrow}
+      onClick={() => {
+        if (!hideArrow) handleClick()
+      }}
     >
       <svg
         xmlns='http://www.w3.org/2000/svg'

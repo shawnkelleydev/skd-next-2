@@ -1,4 +1,5 @@
 .banner {
+  align-items: center;
   display: flex;
   flex: 1;
   justify-content: center;
@@ -8,6 +9,7 @@
 
 .banner > div {
   display: grid;
+  gap: 24px;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   max-width: 1048px;
   padding: 24px;

@@ -1,8 +1,13 @@
+.a {
+  display: flex;
+}
+
 .button {
   background: #303341;
   border: none;
   border-radius: 8px;
   color: #fff;
+  flex: 1;
   font-weight: bold;
   padding: 16px;
   text-transform: uppercase;

@@ -3,6 +3,7 @@ import styles from './styles.module.css'
 export default function Button({ children, url, ...rest }) {
   return (
     <a
+      className={styles.a}
       href={url}
       rel='noreferrer'
       target='_blank'

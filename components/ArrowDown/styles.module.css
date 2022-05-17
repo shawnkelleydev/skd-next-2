@@ -1,12 +1,19 @@
 .arrow-down {
+  border-radius: 50%;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   position: fixed;
   transition: 0.2s ease-out;
+  right: 47.1%;
   bottom: 0;
-  width: 100%;
+}
+
+.arrow-down[data-hide-arrow='false']:hover {
+  background: #ccc;
 }
 
 .arrow-down[data-hide-arrow='true'] {
+  cursor: default;
   fill: transparent;
 }
