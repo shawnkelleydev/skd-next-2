@@ -1,3 +1,12 @@
+.headshot {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  max-width: 300px;
+}
+
 .headshot img {
   border-radius: 50%;
   opacity: 0;

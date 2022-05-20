@@ -9,7 +9,7 @@ const {
   Express,
   HTML,
   CSS,
-  Sass,
+  SASS,
   Git,
   GitHub,
   VSCode,
@@ -46,7 +46,7 @@ const wkcom = new Project(
 
 const fl = new Project(
   'First Light',
-  [React, Router, Sass],
+  [React, Router, SASS],
   'A devotional website featuring all things cosmic.',
   'https://firstlight-skd.netlify.app/',
   'https://github.com/shawnkelleydev/firstlight-fs/tree/main/client',
@@ -55,11 +55,35 @@ const fl = new Project(
 
 const tl = new Project(
   'Tomorrow Land',
-  [React, Router, Sass],
+  [React, Router, SASS],
   'An appealing budget builder managing state from the URL.',
   'https://tomorrow-land-skd.netlify.app/',
   'https://github.com/shawnkelleydev/tomorrow-land-fs/tree/main/client',
   Date.parse('march 1 2022')
 )
 
-export const projects = [skdev, wkcom, fl, tl]
+const skm = new Project(
+  'Shawn Kelley Music',
+  [React, Router, SASS],
+  'A musical composition portfolio.',
+  'https://www.shawnkelleymusic.com',
+  'https://github.com/shawnkelleydev/shawn_kelley_music'
+)
+
+const bndrly = new Project(
+  'Banderly',
+  [React, CSS],
+  'A simple helper for the beginning band student and teacher.',
+  'https://www.banderly.com',
+  'https://github.com/shawnkelleydev/banderly'
+)
+
+const td = new Project(
+  'To Doer',
+  [JavaScript, HTML, CSS],
+  'A simple, vanilla JavaScript task tracker.',
+  'https://shawnkelleydev.github.io/ToDoer/',
+  'https://github.com/shawnkelleydev/ToDoer'
+)
+
+export const projects = [skdev, wkcom, fl, tl, skm, bndrly, td]

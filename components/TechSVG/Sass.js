@@ -1,7 +1,7 @@
-export default function Sass() {
+export default function SASS() {
   return (
     <svg
-      aria-label='Sass'
+      aria-label='SASS'
       viewBox='0 0 512 512'
     >
       <rect

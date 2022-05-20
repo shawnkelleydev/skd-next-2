@@ -8,13 +8,15 @@ export default function Headshot({ step }) {
       className={styles.headshot}
       data-show={step >= 3}
     >
-      <Image
-        height='696'
-        layout='intrinsic'
-        priority='true'
-        src='/headshot.png'
-        width='696'
-      />
+      <div className={styles.container}>
+        <Image
+          height='696'
+          layout='intrinsic'
+          priority='true'
+          src='/headshot.png'
+          width='696'
+        />
+      </div>
     </div>
   )
 }
