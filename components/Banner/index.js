@@ -18,9 +18,9 @@ export default function Banner({ cursor, dispatch, state }) {
           <Button
             data-hide={state.step < 8}
             disabled={state.step < 8}
-            url='https://www.linkedin.com/in/shawnkelleydev/'
+            url='https://github.com/shawnkelleydev/skd-next-2'
           >
-            Connect with Shawn
+            see the repo
           </Button>
         </div>
       </div>

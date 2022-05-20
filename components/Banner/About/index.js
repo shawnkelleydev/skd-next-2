@@ -10,7 +10,7 @@ export default function About({ cursor, step, dispatch }) {
     'His team uses JavaScript to better connect sponsors with children around the world.'
   const p3 =
     'Shawn lives in the Denver metro area with his wife, two daughters, and English Springer Spaniel.'
-  const ps = 'P.S. This website was made with Nextjs.  Next rocks!'
+  const ps = 'P.S. This website was made with Next.'
 
   return (
     <article className={styles.about}>

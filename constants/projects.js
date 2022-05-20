@@ -86,4 +86,4 @@ const td = new Project(
   'https://github.com/shawnkelleydev/ToDoer'
 )
 
-export const projects = [skdev, wkcom, fl, tl, skm, bndrly, td]
+export const projects = [wkcom, fl, tl, skm, bndrly, td]
