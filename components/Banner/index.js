@@ -1,6 +1,7 @@
-import Button from 'components/Button'
 import About from './About'
+import Button from 'components/Button'
 import Headshot from './Headshot'
+import LinkedIn from 'components/LinkedIn'
 
 import styles from './styles.module.css'
 
@@ -15,13 +16,22 @@ export default function Banner({ cursor, dispatch, state }) {
             dispatch={dispatch}
             step={state.step}
           />
-          <Button
-            data-hide={state.step < 8}
-            disabled={state.step < 8}
-            url='https://github.com/shawnkelleydev/skd-next-2'
-          >
-            see the repo
-          </Button>
+          <span data-hide={state.step < 8}>
+            <Button
+              disabled={state.step < 8}
+              url='https://github.com/shawnkelleydev/skd-next-2'
+            >
+              see the repo
+            </Button>
+
+            <a
+              href='https://www.linkedin.com/in/shawnkelleydev/'
+              rel='noreferrer'
+              target='_blank'
+            >
+              <LinkedIn />
+            </a>
+          </span>
         </div>
       </div>
     </section>

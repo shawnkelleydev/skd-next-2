@@ -27,3 +27,24 @@
   flex-direction: column;
   gap: 24px;
 }
+
+.intro span {
+  display: flex;
+  gap: 4px;
+  transition: 0.2s ease-out;
+}
+
+.intro span[data-hide='true'] {
+  opacity: 0;
+  z-index: -1;
+}
+
+.intro svg {
+  border-radius: 8px;
+  height: 100%;
+  transition: 0.2s ease-out;
+}
+
+.intro svg:hover {
+  transform: scale(0.95);
+}
