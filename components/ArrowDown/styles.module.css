@@ -1,20 +1,27 @@
 .arrow-down {
-  background: #fff;
-  border-radius: 50%;
-  cursor: pointer;
   display: flex;
   justify-content: center;
   position: fixed;
   transition: 0.2s ease-out;
-  right: 47.1%;
-  bottom: 8px;
-}
-
-.arrow-down:hover {
-  background: #ccc;
+  left: 0;
+  right: 0;
+  bottom: 4px;
 }
 
 .arrow-down[data-hide-arrow='true'] {
-  cursor: default;
   opacity: 0;
+}
+
+.arrow-down > div {
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  transition: 0.2s ease-out;
+}
+
+.arrow-down[data-hide-arrow='false'] > div:hover {
+  background: #111;
+  fill: #fff;
+  cursor: pointer;
 }

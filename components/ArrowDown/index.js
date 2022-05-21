@@ -25,23 +25,24 @@ export default function ArrowDown() {
   }, [])
 
   const handleClick = () => {
-    scroll({ top: y + windowHeight, left: 0, behavior: 'smooth' })
+    if (y < 1) scroll({ top: y + windowHeight, left: 0, behavior: 'smooth' })
   }
 
   return (
     <div
       className={styles['arrow-down']}
-      data-hide-arrow={false}
-      onClick={handleClick}
+      data-hide-arrow={y > 0 ? true : false}
       ref={ref}
     >
-      <svg
-        xmlns='http://www.w3.org/2000/svg'
-        height='48'
-        width='48'
-      >
-        <path d='M24 30.75 12 18.75 14.15 16.6 24 26.5 33.85 16.65 36 18.8Z' />
-      </svg>
+      <div onClick={handleClick}>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          height='48'
+          width='48'
+        >
+          <path d='M24 30.75 12 18.75 14.15 16.6 24 26.5 33.85 16.65 36 18.8Z' />
+        </svg>
+      </div>
     </div>
   )
 }
