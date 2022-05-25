@@ -46,10 +46,10 @@ const wkcom = new Project(
 
 const fl = new Project(
   'First Light',
-  [React, Router, SASS],
+  [Next, CSS],
   'A devotional website featuring all things cosmic.',
-  'https://firstlight-skd.netlify.app/',
-  'https://github.com/shawnkelleydev/firstlight-fs/tree/main/client',
+  'https://first-light-next.vercel.app',
+  'https://github.com/shawnkelleydev/first-light-next',
   Date.parse('february 1 2022')
 )
 
