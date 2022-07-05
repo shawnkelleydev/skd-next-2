@@ -11,11 +11,7 @@ export default function Banner({ cursor, dispatch, state }) {
       <div>
         <Headshot step={state.step} />
         <div className={styles.intro}>
-          <About
-            cursor={cursor}
-            dispatch={dispatch}
-            step={state.step}
-          />
+          <About />
           <span data-hide={state.step < 8}>
             <Button
               disabled={state.step < 8}
