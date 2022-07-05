@@ -7,8 +7,8 @@ import Footer from 'components/Footer'
 import Header from 'components/Header'
 import PageWrapper from 'components/PageWrapper'
 import Skills from 'components/Skills'
-import Welcome from 'components/Welcome'
-import Projects from 'components/Projects'
+
+import Down from 'components/Down'
 
 export default function Home() {
   const [cursor, setCursor] = useState(true)
@@ -29,24 +29,10 @@ export default function Home() {
   }
 
   const [state, dispatch] = useReducer(reducer, initialState)
+
   return (
     <PageWrapper>
-      <Header
-        cursor={cursor}
-        dispatch={dispatch}
-        state={state}
-      />
-      <Banner />
-      <Family />
-      <Skills />
-      <Projects />
-      <Footer />
-      <ArrowDown />
-      <Welcome
-        cursor={cursor}
-        dispatch={dispatch}
-        state={state}
-      />
+      <Down />
     </PageWrapper>
   )
 }
