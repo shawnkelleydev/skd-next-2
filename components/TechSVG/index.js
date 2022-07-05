@@ -8,7 +8,7 @@ import Next from './Next'
 import Node from './Node'
 import React from './React'
 import Router from './Router'
-import SASS from './SASS'
+import SASS from './Sass'
 import VSCode from './VSCode'
 
 const icons = {
