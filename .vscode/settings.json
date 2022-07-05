@@ -2,7 +2,4 @@
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
 }
