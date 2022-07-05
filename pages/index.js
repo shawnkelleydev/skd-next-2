@@ -36,11 +36,7 @@ export default function Home() {
         dispatch={dispatch}
         state={state}
       />
-      <Banner
-        cursor={cursor}
-        dispatch={dispatch}
-        state={state}
-      />
+      <Banner />
       <Family />
       <Skills />
       <Projects />

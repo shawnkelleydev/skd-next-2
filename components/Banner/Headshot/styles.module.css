@@ -5,14 +5,9 @@
 }
 .container {
   max-width: 300px;
+  width: 80vw;
 }
 
 .headshot img {
   border-radius: 50%;
-  opacity: 0;
-  transition: 1s ease-out;
-}
-
-.headshot[data-show='true'] img {
-  opacity: 1;
 }

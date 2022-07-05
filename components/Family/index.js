@@ -33,6 +33,7 @@ export default function Family() {
       ref={ref}
     >
       <Image
+        alt='family photo with Shawn, two daughters, and wife sitting on a log over a stream in a grassy field'
         height='3769'
         layout='responsive'
         src='/family.jpg'

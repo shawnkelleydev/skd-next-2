@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react'
-
 import TypeOut from 'components/TypeOut'
 
 import { meta } from 'constants/data'

@@ -1,0 +1,17 @@
+
+.buttons {
+  display: flex;
+  gap: 4px;
+  transition: 0.2s ease-out;
+}
+
+.buttons svg {
+  border-radius: 8px;
+  height: 100%;
+  width: 55px;
+  transition: 0.2s ease-out;
+}
+
+.buttons svg:hover {
+  transform: scale(0.95);
+}
